@@ -55,8 +55,13 @@ public class GoldModel extends GameModel {
 	 */
 
 	/** Graphical representation of a coin. */
+<<<<<<< HEAD
 	private static final GameTile COIN_TILE = new RoundTile(Color.BLACK,
 			Color.GREEN, 2.0);
+=======
+	private static final GameTile COIN_TILE = new RoundTile(Color.blue,
+			Color.green, 2.0);
+>>>>>>> 53e5155f96d6b4ba7addd316c844a59989eaa251
 
 	
 			
@@ -196,7 +201,11 @@ public class GoldModel extends GameModel {
 
 		// Remove the coin at the new collector position (if any)
 		if (this.coins.remove(this.collectorPos)) {
+<<<<<<< HEAD
 			score += 2;
+=======
+			this.score+=3;
+>>>>>>> 53e5155f96d6b4ba7addd316c844a59989eaa251
 		}
 
 		// Check if all coins are found
