@@ -351,7 +351,7 @@ public class AdmUsuarios {
                                   
                    PreparedStatement stmt;
                    String query="INSERT INTO `usuario` (`usuario`, `contrasenia`, `tipo`)  "
-                           + "VALUES ('"+usuario.getText()+"','"+clave.getText()+"','"+rol.getValue().toString()+"')";
+                           + "VALUES ('"+usuario.getText()+"','"+clave.getText()+"','"+rol.getValue()+"')";
                    
                    stmt = con.getCn().prepareStatement(query);
                    
@@ -416,7 +416,7 @@ public class AdmUsuarios {
 
             while(rs2.next()){
                 System.out.println(rs2.getString("tipo"));
-                    personas.add(new Persona(rs2.getString("cedula"), rs2.getString("nombres"), rs2.getString("apellidos"), rs2.getString("telefono"),rs2.getString("correo"), rs2.getString("u.usuario"), rs2.getString("contrasenia"), rs2.getString("u.tipo")));
+                    personas.add(new Persona(rs2.getString("cedula"), rs2.getString("nombres"), rs2.getString("apellidos"), rs2.getString("telefono"),rs2.getString("correo"), rs2.getString("u.usuario"), rs2.getString("contrasenia"), rs2.getString("tipo")));
 
             }
 
@@ -425,8 +425,8 @@ public class AdmUsuarios {
 
 
             while(rs2.next()){
-                System.out.println(rs2.getString("tipo"));
-                    personas.add(new Persona(rs2.getString("cedula"), rs2.getString("nombres"), rs2.getString("apellidos"), rs2.getString("telefono"),rs2.getString("correo"), rs2.getString("u.usuario"), rs2.getString("contrasenia"), rs2.getString("u.tipo")));
+                
+                    personas.add(new Persona(rs2.getString("cedula"), rs2.getString("nombres"), rs2.getString("apellidos"), rs2.getString("telefono"),rs2.getString("correo"), rs2.getString("u.usuario"), rs2.getString("contrasenia"), rs2.getString("tipo")));
 
             }
 
