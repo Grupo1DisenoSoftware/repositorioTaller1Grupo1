@@ -7,27 +7,26 @@ package controladores;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 
 /**
  *
  * @author adan
  */
-public class PantallaComprador {
+public final class PantallaComprador {
     
     private BorderPane root;
-    private Button buscar, compend,arttop,salir;
-    private HBox BoxBusqueda, BoxButton;
-    private String usuario; 
-   //  private TextField busqueda;
-   // private Label lblbuscar;
+    private Button buscar;
+    private Button compend;
+    private Button arttop;
+    private Button salir;
+    private HBox BoxBusqueda;
+    private HBox BoxButton;
+
+   
     private VBox box;
 
     PantallaComprador(){        
@@ -37,7 +36,6 @@ public class PantallaComprador {
     }
     
     PantallaComprador(String usuario){        
-        this.usuario= usuario;
         organizarpanel();
 
     }

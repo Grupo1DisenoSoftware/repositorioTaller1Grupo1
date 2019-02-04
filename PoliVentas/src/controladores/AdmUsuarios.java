@@ -18,9 +18,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -30,24 +27,33 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.util.Callback;
 import modelo.Persona;
 
 /**
  *
  * @author adan
  */
-public class AdmUsuarios {
+public final class AdmUsuarios {
     
     
     private BorderPane root;
     private TableView tabla;
     private VBox box,agregar;
-    private Button add,delete,edit,atras,add1;
+    private Button add;
+    private Button delete;
+    private Button edit;
+    private Button atras;
+    private Button add1;
     private HBox botones;
-    private TextField usuario,clave,nombre,apellido,telefono,email,direccion,matricula,cedula;
+    private TextField usuario;
+    private TextField clave;
+    private TextField nombre;
+    private TextField apellido;
+    private TextField telefono;
+    private TextField email;
+    private TextField direccion;
+    private TextField matricula;
+    private TextField cedula;
     private ComboBox rol;
     
     public AdmUsuarios(){
@@ -524,8 +530,6 @@ public class AdmUsuarios {
                     }
                         
 
-
-                // TODO code application logic here
             } catch (SQLException ex) {
                 Logger.getLogger(PoliVentas.class.getName()).log(Level.SEVERE, null, ex);
                 return false;

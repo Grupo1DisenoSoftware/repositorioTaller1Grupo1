@@ -5,14 +5,10 @@
  */
 package controladores;
 
-import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 /**
@@ -22,7 +18,10 @@ import javafx.scene.layout.VBox;
 public class PantallaAdministrador {
     
     private BorderPane root;
-    private Button admUser, admProd,salir;
+    private Button admUser;
+    private Button admProd;
+    private Button salir;
+
     
     private VBox box;
 
@@ -43,28 +42,14 @@ public class PantallaAdministrador {
             salir = new Button("Cerrar Sesión");
            
             
-            
-           
-            
-           
-            
-            
 
-           
             DarEfectoBoton(admUser);
             admUser.setOnAction(e -> PoliVentas.cambiarVentana(root, new AdmUsuarios().getRoot()));
             //
             
             DarEfectoBoton(admProd);
             admProd.setOnAction(e -> PoliVentas.cambiarVentana(root, new AdmProducto().getRoot()));
-            //
-
-            
-
-            
-
-        //    inicio.setOnAction(e -> PoliVentas.cambiarVentana(root, new PantallaVendedor().getRoot()));
-        
+     
             DarEfectoBoton(salir);
             
             salir.setOnAction(e -> PoliVentas.cambiarVentana(root, new Inicio().getRoot()));

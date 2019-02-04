@@ -155,13 +155,13 @@ public class Registro {
                    
                    
                    ResultSet rs= stmt.executeQuery();
-                   System.out.println("mm");
+                 
                    query="INSERT INTO `"+rol.getValue().toString()+"` (`cedula`, `nombres`, `apellidos`, `correo`, `telefono`, `usuario`) "
                            + "VALUES ('"+cedula.getText()+"','"+nombre.getText()+"','"+apellido.getText()+"','"+email.getText()+"','"+telefono.getText()+"','"+usuario.getText()+"')";
                    
                    stmt = con.getCn().prepareStatement(query);
                    
-                   System.out.println("am");
+                   
                    ResultSet rs2= stmt.executeQuery();
                    
                    if(rol.getValue()=="vendedor"){

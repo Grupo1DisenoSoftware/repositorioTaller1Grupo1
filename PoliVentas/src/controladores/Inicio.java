@@ -5,8 +5,6 @@
  */
 package controladores;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +17,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -32,18 +29,23 @@ import javafx.scene.text.Font;
  *
  * @author adan
  */
-public class Inicio {
+public final class Inicio {
     
     private BorderPane root;
-    private Button inicio, salir;
-    private HBox BoxUser, BoxPass;
-    private TextField usuario, clave;
-    private Label lbluser, lblpass;
+    private Button inicio;
+    private Button salir;
+    private HBox BoxUser;
+    private TextField usuario;
+    private TextField clave;
+    private Label lbluser;
+    private Label lblpass;
     private  static String nombreusuario;
     
 
 
-    private VBox box, boxlabel, boxfield;
+    private VBox box;
+    private VBox boxlabel;
+    private VBox boxfield;
 
     Inicio(){        
 
@@ -57,7 +59,6 @@ public class Inicio {
             root = new BorderPane();
             box = new VBox();
             BoxUser = new HBox();
-            BoxPass = new HBox();
             boxlabel = new VBox();
             boxfield = new VBox();
 

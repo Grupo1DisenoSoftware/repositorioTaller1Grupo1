@@ -5,18 +5,12 @@
  */
 package controladores;
 
-import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 
 /**
  *
@@ -26,10 +20,15 @@ public class PantallaVendedor {
     
        
     private BorderPane root;
-    private Button buscar, compend,arttop,salir,venPen,misProd;
-    private HBox BoxBusqueda, BoxButton;
-    //private TextField busqueda;
-   // private Label lblbuscar;
+    private Button buscar;
+    private Button compend;
+    private Button arttop;
+    private Button salir;
+    private Button venPen;
+    private Button misProd;
+    private HBox BoxBusqueda;
+    private HBox BoxButton;
+
     private VBox box;
 
     PantallaVendedor(){        

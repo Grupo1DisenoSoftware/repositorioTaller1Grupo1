@@ -21,7 +21,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -29,7 +28,7 @@ import javafx.scene.layout.VBox;
  *
  * @author RBLOO
  */
-public class PantallaMisProductos {
+public final class PantallaMisProductos {
     
     private BorderPane root;
     private TableView tabla;
@@ -157,13 +156,7 @@ public class PantallaMisProductos {
         
         
         nombre.setMinWidth(100);
-        
-        
-        
-       
-        
-       // tabla.setItems(data);
-        
+
         
         tabla.getColumns().addAll(nombre,categoria,precio);
         
@@ -181,7 +174,7 @@ public class PantallaMisProductos {
                     stmt2 = con.getCn().prepareStatement("SELECT cedula FROM vendedor where usuario=?");
                 
                     stmt2.setString(1, Inicio.getUsuario());
-                    //stmt2.setString(2, clave.getText());
+                  
                     ResultSet rs2= stmt2.executeQuery();
                     System.out.println("..");
                    String cedula="hola";
@@ -220,18 +213,15 @@ public class PantallaMisProductos {
                     tabla.setEditable(true);
                     tabla.setVisible(true);
 
-
-                            //TableColumn nombre = new TableColumn("First Name");
                     nombre.setMinWidth(100);
                     nombre.setCellValueFactory(
                             new PropertyValueFactory<Producto, String>("nombre"));
 
-                    //TableColumn apellido = new TableColumn("Last Name");
                     categoria.setMinWidth(100);
                     categoria.setCellValueFactory(
                             new PropertyValueFactory<Producto, String>("categoria"));
 
-                    //TableColumn emailCol = new TableColumn("Email");
+
                     precio.setMinWidth(200);
                     precio.setCellValueFactory(
                             new PropertyValueFactory<Producto, Float>("precio"));

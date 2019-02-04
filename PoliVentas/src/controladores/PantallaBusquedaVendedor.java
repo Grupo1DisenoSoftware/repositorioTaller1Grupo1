@@ -33,7 +33,7 @@ import javafx.scene.text.Font;
  *
  * @author adan
  */
-public class PantallaBusquedaVendedor {
+public final class PantallaBusquedaVendedor {
     
     private BorderPane root;
     private StackPane panelCentral;
@@ -42,7 +42,7 @@ public class PantallaBusquedaVendedor {
     private Label lbl_elemento;
     private TextField tf_buscar;
     private HBox panelSuperior;
-    private TextArea ta_resultados;
+    private TextArea taresultados;
     private VBox box;
     
     
@@ -58,7 +58,7 @@ public class PantallaBusquedaVendedor {
         lbl_elemento = new Label("Ingrese producto a buscar: ");
         tf_buscar = new TextField();
         panelSuperior = new HBox();
-        ta_resultados = new TextArea();
+        taresultados = new TextArea();
         panelCentral = new StackPane();
         
         DarEfectoBoton(btn_salir);
@@ -67,13 +67,13 @@ public class PantallaBusquedaVendedor {
         Image image = new Image(getClass().getResourceAsStream("/imagenes/azul.jpg"));
         ImageView iv = new ImageView(image);
         
-        ta_resultados.setScaleX(0.5);
-        ta_resultados.setScaleY(0.5);
+        taresultados.setScaleX(0.5);
+        taresultados.setScaleY(0.5);
         iv.setFitHeight(Constantes.ALTO/2);
         iv.setFitWidth(Constantes.ANCHO/2);
         
         
-        panelCentral.getChildren().addAll(iv,ta_resultados);
+        panelCentral.getChildren().addAll(iv,taresultados);
         panelCentral.setAlignment(Pos.CENTER);
         
         panelSuperior.getChildren().addAll(lbl_elemento,tf_buscar, btn_buscar,btn_salir);
@@ -91,7 +91,6 @@ public class PantallaBusquedaVendedor {
 
         
         btn_salir.setOnAction(e ->PoliVentas.cambiarVentana(root, new PantallaBusquedaVendedor().getRoot()));
-       // root.setTop(panelSuperior);
         root.setCenter(box);
        
         
